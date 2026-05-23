@@ -13,6 +13,11 @@ const server = http.createServer (
     }
 );
 
-server.listen(3000,() =>{
-    console.log('Servidor rodando');
+// Configurações do servidor
+const PROTOCOL = 'http'
+const PORT = 3000
+const HOST = 'localhost'
+
+server.listen(PORT,() =>{
+    console.log(`Servidor rodando em: ${PROTOCOL}://${HOST}:${PORT}`);
 });
